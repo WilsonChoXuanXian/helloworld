@@ -1,0 +1,34 @@
+// This program will read in the quantity of a particular item and its price.
+// It will then print out the total price.
+// The input will come from the keyboard and the output will go to
+// the screen.
+
+// CHO XUAN XIAN
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    int quantity;               // contains the amount of items purchased
+    float itemPrice;            // contains the price of each item
+    float totalBill;            // contains the total bill.
+
+    cout << setprecision(2) << showpoint; // formatted output
+    cout << "Please input the number of items bought" << endl;
+
+    cin >> quantity;
+
+    cout << "Please input the price of each item" << endl;
+
+    cin >> itemPrice;
+
+    totalBill = quantity * itemPrice;
+
+    cout << "The total bill is $" << totalBill << endl;
+
+return 0;
+}
+
+// the fixed attribute in the cout statement write the floating-point values in fixed-point notation.
