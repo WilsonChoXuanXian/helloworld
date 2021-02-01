@@ -100,129 +100,101 @@ void sleep(int s){
 void printLetter(char matrix[][128], int size, int time){
         
     system("cls");
-
     for (int i=0;i<sz;i++)
     {
         int col = 0;
 
         for (int j=0;j<sz;j++)
             matrix[i][col++]=' ';
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_w[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++]= letter_e[i][j];
-        
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++]= letter_l[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_c[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_o[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_m[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_e[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++]=' ';
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_t[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_o[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++]=' ';
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_m[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_a[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_r[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
 
         for (int j=0;j<sz;j++)
             matrix[i][col++] = letter_s[i][j];
-
         for (int j=0;j<3;j++)
             matrix[i][col++]=' ';
     }
 
-
-    for (int i=0;i<sz;i++)
-    {
-        for (int j=0; j<128; j++)
-            cout << matrix[i][j];
-        cout << endl;
-    }
-
-//-------------------------------------------------
-
-    for (int i=0; i<size;i++)
-    {        
+    for (int i=0; i<=size;i++)
+    {   
         sleep(time);
-        shiftLetter(matrix);
-
         for (int i=0;i<sz;i++)
         {
             for (int j=0; j<128; j++)
                 cout << matrix[i][j];
             cout << endl;
         }
+        shiftLetter(matrix);
     }
 }
 
