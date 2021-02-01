@@ -1,7 +1,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
-#include <windows.h>     // for windows systems
+#include <windows.h>
 
 using namespace std;
 
@@ -92,9 +92,8 @@ void shiftLetter(char matrix[][128])
 }
 
 void sleep(int s){
-    //this_thread::sleep_for (chrono::seconds(s));    // linux
-    Sleep(s*400);                                    // windows
-    system("cls");   // windows: system("cls");
+    Sleep(s*400);
+    system("cls");
 }
 
 void printLetter(char matrix[][128], int size, int time){
