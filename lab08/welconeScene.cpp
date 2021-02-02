@@ -69,21 +69,21 @@ char letter_s[5][5]={{'S','S','S','S','S'},
 
 void shiftLetter(char matrix[][128])
 {
-    char ch[5][8];
+    char ch[sz][8];
 
-    for (int i=0;i<5;i++)
+    for (int i=0;i<sz;i++)
     {
         for (int j=0;j<8;j++)
         ch[i][j] = matrix[i][j];
     }
 
-    for (int i=0;i<5;i++)
+    for (int i=0;i<sz;i++)
     {
         for (int j=0;j<120;j++)
         matrix[i][j] = matrix[i][j+8];
     }
 
-    for (int i=0;i<5;i++)
+    for (int i=0;i<sz;i++)
     {
         for (int j=0;j<8;j++)
         matrix[i][j+120] = ch[i][j];
@@ -96,94 +96,71 @@ void sleep(int s){
     system("cls");
 }
 
+void spaces(char matrix[][128], int row, int &column){
+    for (int i=0;i<3;i++)
+            matrix[row][column++]=' ';
+}
+
+void setLetter(char matrix[][128]){
+    for (int i=0;i<sz;i++)
+    {
+        int col=0;
+
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = ' ';
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_w[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++]= letter_e[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++]= letter_l[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_c[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_o[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_m[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_e[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = ' ';
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_t[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_o[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = ' ';
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_m[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_a[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_r[i][j];
+        spaces(matrix,i,col);
+        for (int j=0;j<sz;j++)
+            matrix[i][col++] = letter_s[i][j];
+        spaces(matrix,i,col);
+    }
+}
+
 void printLetter(char matrix[][128], int size, int time){
         
     system("cls");
-    for (int i=0;i<sz;i++)
-    {
-        int col = 0;
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++]=' ';
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_w[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++]= letter_e[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++]= letter_l[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_c[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_o[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_m[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_e[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++]=' ';
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_t[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_o[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++]=' ';
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_m[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_a[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_r[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-
-        for (int j=0;j<sz;j++)
-            matrix[i][col++] = letter_s[i][j];
-        for (int j=0;j<3;j++)
-            matrix[i][col++]=' ';
-    }
-
+    setLetter(matrix);
     for (int i=0; i<=size;i++)
     {   
         sleep(time);
@@ -200,11 +177,10 @@ void printLetter(char matrix[][128], int size, int time){
 int main()
 {
     int time=1;
-    int size=16;
-    char matrix[5][128];    // 80 for the letters and 48 for spaces
+    int numOfWords=16;
+    char welcome[sz][128];    // 80 for the letters and 48 for spaces
 
-    printLetter(matrix,size,time);
-    
+    printLetter(welcome,numOfWords,time);
     cout << endl;
     system("pause");
 
