@@ -5,15 +5,10 @@
 #include <math.h>
 using namespace std;
 
-void mul (int &n)
-{
-    n = 20;
-}
-
 int main(){
-    int n = 4, m = 5;
-    mul( m );
-    cout << n;
+    int map[5] = {1,2,3,4,5};
+
+    cout << map[0];
 
 return 0;
 }
