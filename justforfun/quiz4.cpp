@@ -6,9 +6,13 @@
 using namespace std;
 
 int main(){
-    int map[5] = {1,2,3,4,5};
-
-    cout << map[0];
+    int n =4;
+    mul();
+    cout << n;
 
 return 0;
+}
+
+void mul(){
+    int n =20;
 }
