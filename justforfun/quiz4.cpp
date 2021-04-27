@@ -6,13 +6,7 @@
 using namespace std;
 
 int main(){
-    int n =4;
-    mul();
-    cout << n;
-
-return 0;
-}
-
-void mul(){
-    int n =20;
+    int x = 5;
+    x = x / 2;
+    cout << x;
 }
