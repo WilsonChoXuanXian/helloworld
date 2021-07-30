@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Hello",
+            "request": "launch",
+            "mainClass": "javaProgram.Hello",
+            "projectName": "helloworld_adbe64a4"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "javaProgram.Main",
